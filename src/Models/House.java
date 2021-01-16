@@ -7,8 +7,11 @@ import org.dizitart.no2.objects.Id;
 public class House {
     @Id
     private String id;
+    private String customer;
+    private String sellerId;
     private int sellerCommission = 150;
     private int profit = 1000;
+    private String date;
 
     public String getId() {
         return id;
@@ -16,6 +19,22 @@ public class House {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(String customer) {
+        this.customer = customer;
+    }
+
+    public String getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(String sellerId) {
+        this.sellerId = sellerId;
     }
 
     public int getSellerCommission() {
@@ -34,10 +53,20 @@ public class House {
         this.profit = profit;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "House{" +
                 "id='" + id + '\'' +
+                ", customer='" + customer + '\'' +
+                ", sellerId='" + sellerId + '\'' +
                 ", sellerCommission=" + sellerCommission +
                 ", profit=" + profit +
                 '}';
